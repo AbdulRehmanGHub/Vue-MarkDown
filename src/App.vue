@@ -1,6 +1,8 @@
 <template>
   <div id="heading">
-    <h1>< Markdown Editor /></h1>
+    <h1>
+      < Markdown Editor />
+    </h1>
   </div>
   <div id="app">
     <MarkdownEditor />
@@ -19,21 +21,18 @@ export default {
 </script>
 
 <style>
-
-body{
+body {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
 }
 
-#heading{
+#heading h1{
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -43,9 +42,45 @@ body{
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin: 10px 60px;
-  /* background-color: aqua; */
+  width: 90%;
+  margin: 10px auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  #heading h1{
+    font-size: 24px;
+  }
+
+  #app {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #heading h1{
+    font-size: 40px;
+  }
+
+  #app {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #heading h1{
+    font-size: 60px;
+  }
+
+  #app {
+    max-width: 100%;
+    margin: 14px auto;
+  }
 }
 </style>
