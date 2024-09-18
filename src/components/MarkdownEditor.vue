@@ -57,6 +57,8 @@ textarea {
   background-color: honeydew;
   width: 400px;
   height: 200px;
+  overflow: auto;
+  word-break: break-all;
   text-align: start;
   font-size: 40px;
 }
